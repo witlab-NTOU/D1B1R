@@ -1,0 +1,19 @@
+[Delivery ratio]
+source, sink, relay = (1,1,10~100)
+dimension = 1000*1000*1000
+transmission max = 350
+source/sink position setting = 0/0
+random seed = 0
+timeslotLength = 100
+(test case)
+  relay node = 10 --> delivery ratio = 0%
+  relay node = 20 --> delivery ratio = 0%
+  relay node = 30 --> delivery ratio = 40%
+  relay node = 40 --> delivery ratio = 54%
+  relay node = 50 --> delivery ratio = 75%
+  relay node = 60 --> delivery ratio = 92%
+  relay node = 70 --> delivery ratio = 95%
+  relay node = 80 --> delivery ratio = 96%
+  relay node = 90 --> delivery ratio = 97%
+  relay node = 100 --> delivery ratio = 95%
+

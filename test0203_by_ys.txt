@@ -1,0 +1,41 @@
+[Delivery ratio]
+source, sink, relay = (1,1,100~1000)
+dimension = 2000*2000*2000
+transmission max = 350
+source/sink position setting = 0/0
+random seed = 0
+timeslotLength = 100
+(test case)
+  relay node = 100 --> delivery ratio = 0%
+  relay node = 200 --> delivery ratio = 0%
+  relay node = 300 --> delivery ratio = 52%
+  relay node = 400 --> delivery ratio = 78%
+  relay node = 500 --> delivery ratio = 88%
+  relay node = 600 --> delivery ratio = 87%
+  relay node = 700 --> delivery ratio = 96%
+  relay node = 800 --> delivery ratio = 97%
+  relay node = 900 --> delivery ratio = 96%
+  relay node = 1000 --> delivery ratio = 97%
+
+[Hop count]
+source, sink, relay = (1,1,700)
+transmission max = 350
+source/sink position setting = 0/0
+random seed = 0
+timeslotLength = 100
+(test case)
+  dimension = 2000*2000*2000, relay node = 700 ---> hopcount = 8~17
+(special test case)
+  dimension = 350*350*350, no collision ---> delivery ratio = 100%, hop count = 1~2
+
+[Energy consumption]
+source, sink, relay = (1,1,700)
+dimension = 2000*2000*2000
+transmission max = 350
+source/sink position setting = 0/0
+random seed = 0
+timeslotLength = 100
+(test case)
+  source node (only sending) ~= 24 J consumed  =  120*0.002*100 (theoretical value)
+  source node (only idle) ~= 5.7648 J consumed =  0.000008*720600 (theoretical value)
+  sink node (only receiving), no collision ~= 9 J consumed (ok) =  120*0.00075*100 (theoretical value)
