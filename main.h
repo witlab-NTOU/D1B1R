@@ -124,7 +124,7 @@ typedef struct PHB_Item   // Packet history buffer (Q2) item
 
 typedef struct DBR_Node  // Data structure for node
 {
-    int nX, nY, nZ;
+    float nX, nY, nZ;                      // 2017.04.10 fixed bug (±q int §ï¬° float)
     int nodeType;
     float currentEnergy, consumedEnergy;   // energy of node
 
